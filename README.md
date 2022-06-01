@@ -157,6 +157,40 @@
 >```
 ---
 ### jobs
+>현재 세션의 작업 상태를 출력한다.
+#### 사용법 및 옵션
+```
+jobs [옵션] [job ID]
+jobs -x command [args]
+```
+- **-l** : 프로세스 그룹 ID를 state 필드 앞에 출력한다.
+- **-n** : 프로세스 그룹 중에 대표 프로세스 ID를 출력한다.
+- **-p** : 각 프로세스 ID에 대해 한 행씩 출력한다.
+- **command** : 지정한 명령어를 실행한다.
+
+#### 설명
+>jobs는 작업이 중지된 상태, 백그라운드로 진행 중인 작업 상태, 변경되었지만 보고되지 않은 상태 등을 표시한다.
+
+현재 환경의 작업 상태를 아래와 같이 확인할 수 있다.\
+![ka38_149_i2](https://user-images.githubusercontent.com/106523894/171385593-0c8e6c8f-04ee-42b0-876f-4cf9fb261388.jpg)\
+-l 옵션은 state 필드 앞에 프로세스 ID를 출력한다.\
+![ka38_149_i3](https://user-images.githubusercontent.com/106523894/171385661-d8a9e241-a069-4e9e-8671-8654b8dd1df4.jpg)\
+jobs 명령어로 확인할 수 있는 세션의 상태값은 다음과 같다.
+|상태|설명|
+|:--:|----|
+Running|작업이 일시 중단되지 않았고 종료하지 않고 계속 진행 중임을 뜻한다.
+Done|작업이 완료되어 0을 반환하고 종료했음을 뜻한다.
+Done (code)|작업이 정상적으로 완료했으며, 0이 아닌 코드를 반환했음을 뜻한다.
+Stopped|작업이 일시 중단됨을 뜻한다.
+Stopped (SIGTSTP)|SIGTSTP 신호가 작업을 일시 중단했음을 뜻한다.
+Stopped (SIGSTOP)|SIGSTOP 신호가 일시 중단했음을 뜻한다.
+Stopped (SIGTTIN)|SIGTTIN 신호가 작업을 일시 중단했음을 뜻한다.
+Stopped (SIGTTOU)|SIGTTOU 신호가 작업을 일시 중단했음을 뜻한다.
+
+다음과 같이 하면 v로 시작하는 모든 프로세스 ID를 확인할 수 있다.
+![ka38_149_i4](https://user-images.githubusercontent.com/106523894/171386266-a1cb248f-ea15-4074-b67b-f34e3f4bdbfd.jpg)
+
+
 ---
 ### kill
 
