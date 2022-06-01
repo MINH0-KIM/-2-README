@@ -1,7 +1,22 @@
 # 과제2-조사내용 README파일로  정리하기
 - 리눅스 명령어와 vim 에디터에서 매크로 관련하여 조사
-1. 리눅스 명령어 : top, ps, jobs, kill 명령어 조사하기
-2. vim 에디터에서 매크로 사용방법에 대하여 조사하기 (q , @)
+1. [리눅스 명령어 : top, ps, jobs, kill 명령어 조사하기](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#1-%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%AA%85%EB%A0%B9%EC%96%B4--top-ps-jobs-kill-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A1%B0%EC%82%AC%ED%95%98%EA%B8%B0)
+   - [top](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#top)
+      - [사용법 및 옵션](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#%EC%82%AC%EC%9A%A9%EB%B2%95-%EB%B0%8F-%EC%98%B5%EC%85%98)
+      - [설명](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#%EC%84%A4%EB%AA%85)
+      - [top 단축키 명령어](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#top-%EB%8B%A8%EC%B6%95%ED%82%A4-%EB%AA%85%EB%A0%B9%EC%96%B4)
+      - [top 보기 수정 단축키](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#top-%EB%B3%B4%EA%B8%B0-%EC%88%98%EC%A0%95-%EB%8B%A8%EC%B6%95%ED%82%A4)
+      - [top 정렬 단축키](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#top-%EC%A0%95%EB%A0%AC-%EB%8B%A8%EC%B6%95%ED%82%A4)
+      - [top 항목에 대한 설명](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#top-%ED%95%AD%EB%AA%A9%EC%97%90-%EB%8C%80%ED%95%9C-%EC%84%A4%EB%AA%85)
+   - [ps](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#ps)
+     - [사용법 및 옵션](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#%EC%82%AC%EC%9A%A9%EB%B2%95-%EB%B0%8F-%EC%98%B5%EC%85%98-1)
+     - [주요 명령어](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#%EC%A3%BC%EC%9A%94-%EB%AA%85%EB%A0%B9%EC%96%B4)
+     - [설명](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#%EC%84%A4%EB%AA%85-1)
+     - [자주 사용하는 ps 옵션의 조합](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-ps-%EC%98%B5%EC%85%98%EC%9D%98-%EC%A1%B0%ED%95%A9)
+   - [jobs](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#jobs)
+   - [kill](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#kill)
+2. [vim 에디터에서 매크로 사용방법에 대하여 조사하기 (q , @)](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#2-vim-%EC%97%90%EB%94%94%ED%84%B0%EC%97%90%EC%84%9C-%EB%A7%A4%ED%81%AC%EB%A1%9C-%EC%82%AC%EC%9A%A9%EB%B0%A9%EB%B2%95%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-%EC%A1%B0%EC%82%AC%ED%95%98%EA%B8%B0-q--)
+   - [매크로](https://github.com/MINH0-KIM/-2-README/edit/main/README.md#%EB%A7%A4%ED%81%AC%EB%A1%9C)
 
 ## 1. 리눅스 명령어 : top, ps, jobs, kill 명령어 조사하기
 
@@ -261,11 +276,11 @@ ps 명령으로 확인한 PID를 이용하면 원하는 프로세스를 종료�
 #### 사용법 및 단축키
 |기능|일반모드|EX|
 |--|-----|----|
-녹화|q+(매크로KEY)|qa
-녹화종료|q|q
-재생|@+(매크로KEY)|@a
-마지막매크로실행|@@|@@
-횟수실행|(횟수)@(매크로KEY)|10@a
+녹화|**q+(매크로KEY)**|qa
+녹화종료|**q**|q
+재생|**@+(매크로KEY)**|@a
+마지막매크로실행|**@@**|@@
+횟수실행|**(횟수)@(매크로KEY)**|10@a
 #### EX
 1. 일반모드에서 **q+a** 입력\
 ![시작](https://user-images.githubusercontent.com/106523894/171425549-6274624d-9e3c-4f27-87bd-f5686dd9268f.png)
