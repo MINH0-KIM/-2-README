@@ -99,9 +99,62 @@
 \*|**X**|COMMAND|명령어
 ||**Y**|LC|마지막으로 사용한 CPU
 ||**Z**|FLAGS|테스크 플래그
+>\*는 현재 사용하고 있다는 뜻이다.
 
 ---
 ### ps
+>프로세스의 현재 상태를 출력한다.
+#### 사용법 및 옵션
+
+    ps [옵션]
+
+##### 주요 명령어
+- **-e** : 커널 프로세스를 제외한 모든 프로세스를 출력한다.\
+![e](https://user-images.githubusercontent.com/106523894/171360633-07e805d9-5e70-4ca9-9a6e-323f4b13833d.png)
+- **-f** : UID, PID, PPID, C, STIME, TTY, TIME, CMD 등의 필드를 CMD 필드의 전체 명령어 형태로 출력한다.\
+![f](https://user-images.githubusercontent.com/106523894/171361490-2a3cb169-5c00-4663-86a8-938cc9626a3e.png)
+- **-u [사용자]** : 특정 **사용자**의 프로세스 정보를 출력, **사용자**를 지정하지 않는다면 현재 **사용자** 기준으로 출력\
+![u](https://user-images.githubusercontent.com/106523894/171363157-3afc0c3a-7774-435c-9dcd-7033c987dfa0.png)
+>ps 명령어는 보통 아래와 같이 grep와 연동해서 사용한다.\
+>![그랩](https://user-images.githubusercontent.com/106523894/171359664-78214d2a-d0af-4a18-a57d-1f775700f0ee.png)
+
+##### 설명
+>ps 명령어는 프로세스의 현재 상태를 출력한다.
+>>**ps와 top의 차이점**
+>>- ps는 ps한 시점에 proc에서 검색한 cpu 사용량을 출력한다.
+>>- top은 proc에서 일정 주기로 합산해 cpu 사용율을 출력한다
+###### 자주 사용하는 ps 옵션의 조합
+>표준 문장으로 시스템의 모든 프로세스를 출력한다.
+>```
+>$ ps -e
+>$ ps -ef
+>$ ps -eF
+>$ ps -ely
+>```
+
+>BSD 문장으로 시스템의 모든 프로세스를 출력한다.
+>```
+>$ ps ax
+>$ ps aux
+>```
+
+>프로세스 트리를 출력할 수 있다.
+>```
+>$ ps -ejH
+>$ ps axjf
+>```
+
+>스레드 정보를 출력한다.
+>```
+>$ ps -eLf
+>$ ps axms
+>```
+
+>아래 옵션은 보안 정보를 확인할 수 있다.
+>```
+>$ ps -eo euser, ruser, suser, fuser, f, comm., lable
+>$ ps axZ
+>```
 ---
 ### jobs
 ---
